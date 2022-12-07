@@ -4,7 +4,7 @@ export const useLagrange = () => {
     
     const [TypesInter, setTypesInter] = useState('')
     const [calculos, setCalculos] = useState([]);
- 
+    const [interpolationResult, setInterpolationResult ] = useState(0)
     // Asignacion de valores
     let x_Values_Array = [1995, 2000, 2005, 2010];
 
@@ -39,7 +39,6 @@ export const useLagrange = () => {
         
         for (let i = initialValue; i < x_Values_Array.length; i++) {
             let key = index;
-            // let key = L${index};
             let prod = 1;
 
             for (let j = initialValue; j < x_Values_Array.length; j++) {
@@ -51,7 +50,8 @@ export const useLagrange = () => {
             fechas = x_Values_Array[i];
             fx = fx_Values_Array[i];
 
-            suma = suma + fx_Values_Array * prod;
+            suma = suma + fx * prod;
+
             result_table.push({
                 label: key,
                 "x": fechas,
@@ -59,9 +59,10 @@ export const useLagrange = () => {
                 "L": prod.toFixed(type === 4 ? 3 : type === 3 ? 2 : 1)
             })
             index++;
-        } 
-
-        console.table(result_table);
+        }
+        
+        console.log(result_table)
+        setInterpolationResult(suma);
         setCalculos(result_table);
     }
 
@@ -69,7 +70,9 @@ export const useLagrange = () => {
         interpolation,
         result_table,
         calculos,
-        TypesInter
+        TypesInter,
+        interpolationResult,
+        interpolation_value
     })
 }
 
