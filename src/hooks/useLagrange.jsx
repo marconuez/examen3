@@ -61,7 +61,6 @@ export const useLagrange = () => {
             index++;
         }
         
-        console.log(result_table)
         setInterpolationResult(suma);
         setCalculos(result_table);
     }
