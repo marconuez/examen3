@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import menu from './img/menu.png'
 
 export const SideBar = () => {
@@ -21,9 +22,15 @@ export const SideBar = () => {
                     
                     <div className="contenedor-lista">
                         <ul>
-                        <li><a className="dropdown-item opc" href="index.html">Menú Principal</a></li>
-                        <li><a className="dropdown-item opc" href="metodo1.html">Método de Interpolación Lagrange</a></li>
-                        <li><a className="dropdown-item opc" href="metodo2.html">Método de Gauss-Seidel</a></li>
+                            <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
+                                <NavLink className="nav-item nav-link text-left p-2" to="/">Dashboard</NavLink>
+                            </nav>
+                            <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
+                                <NavLink className="nav-item nav-link text-left p-2" to="/Lagrange">Método de Interpolación Lagrange</NavLink>
+                            </nav>
+                            <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
+                                <NavLink className="nav-item nav-link text-left p-2" to="/Gauss">Método de Gauss-Seidel</NavLink>
+                            </nav>
                         </ul>
                     </div>
                     </div>
