@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { NavBar } from './components/NavBar'
-import { LagrangePage } from './pages/LagrangePage'
+import { BrowserRouter } from "react-router-dom";
+import { ExamenApp } from '../ExamenApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LagrangePage />
+    <BrowserRouter>
+      <ExamenApp />
+    </BrowserRouter>
   </React.StrictMode>
 )
