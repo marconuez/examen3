@@ -12,7 +12,7 @@ export const AppRouter = () => {
             <Route path="Gauss" element={<GaussSeidelPage/>}/>
 
             <Route path='Dashboard' element={<DashboardPage/>}/>
-            <Route path='/' element={<Navigate to="Dashboard"/>}/>
+            <Route path='*' element={<Navigate to="Dashboard"/>}/>
         </Routes>
     )
 }

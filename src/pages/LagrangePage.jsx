@@ -25,40 +25,43 @@ export const LagrangePage = () => {
 
                 <br />
 
-                <table className="table table-responsive rounded-top">
-                    <thead className="table-light rounded-top">
-                        <tr className="rounded">
-                            <th scope="col">x</th>
-                            <th scope="col">f(x)</th>
-                            <th scope="col">Valor a interpolar</th>
-                            <th scope="col">fn(x)</th>
+                <div className="table-responsive-sm">
+                    <table className="table">
+                        <thead className="table-light">
+                            <tr>
+                                <th scope="col">x</th>
+                                <th scope="col">f(x)</th>
+                                <th scope="col">Valor a interpolar</th>
+                                <th scope="col">fn(x)</th>
+                                {
+                                    calculos.map((valores) => (
+                                        <th scope="col">L {valores.label}</th>
+                                    ))
+                                }
+                            </tr>
+                        </thead>
+
+                        <tbody className='text-light'>
                             {
                                 calculos.map((valores) => (
-                                    <th scope="col">L {valores.label}</th>
+                                    <tr key={valores.label}>
+                                        <td>{valores.x}</td>
+                                        <td>{valores.funcion}</td>
+                                        <td>{valores.label === 0 ? interpolation_value : ''}</td>
+                                        <td>{valores.label === 0 ? interpolationResult.toFixed(1) : ''}</td>
+                                        {
+                                            calculos.map((interpolations) => (
+                                                valores.label == 0 ? <td>{interpolations.L}</td> : <td> </td>
+                                            ))
+                                        }
+                                    </tr>
                                 ))
                             }
-                        </tr>
-                    </thead>
 
-                    <tbody className='text-light'>
-                        {
-                            calculos.map((valores) => (
-                                <tr key={valores.label}>
-                                    <td>{valores.x}</td>
-                                    <td>{valores.funcion}</td>
-                                    <td>{valores.label === 0 ? interpolation_value : ''}</td>
-                                    <td>{valores.label === 0 ? interpolationResult.toFixed(1) : ''}</td>
-                                    {
-                                        calculos.map((interpolations) => (
-                                            valores.label == 0 ? <td>{interpolations.L}</td> : <td> </td>
-                                        ))
-                                    }
-                                </tr>
-                            ))
-                        }
+                        </tbody>
+                    </table>
 
-                    </tbody>
-                </table>
+                </div>
 
             </div>
         </div>
