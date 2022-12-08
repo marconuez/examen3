@@ -5,11 +5,11 @@ import menu from './img/menu.png'
 export const SideBar = () => {
     return (
         <>
-            <div className="contenedor-sidebar">
+            <div className="contenedor-sidebar sticky-top">
                 <img  className="boton-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" src={menu}></img>
             </div>  
 
-            <div className="sidebar">
+            <div className="sidebar gg ">
                 <div className="offcanvas offcanvas-start bg-dark text-bg-dark" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div className="offcanvas-header">
                     <h4 className="offcanvas-title " id="offcanvasExampleLabel">Métodos Numéricos</h4>
@@ -23,7 +23,7 @@ export const SideBar = () => {
                     <div className="contenedor-lista">
                         <ul>
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
-                                <NavLink className="nav-item nav-link text-left p-2" to="/">Dashboard</NavLink>
+                                <NavLink className="nav-item nav-link text-left p-2" to="Dashboard">Inicio</NavLink>
                             </nav>
                             <nav className="nav-link btn btn-dark" aria-current="page" href="#" data-bs-dismiss="offcanvas">
                                 <NavLink className="nav-item nav-link text-left p-2" to="/Lagrange">Método de Interpolación Lagrange</NavLink>
