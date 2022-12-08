@@ -48,8 +48,8 @@ export const GaussSeidelPage = () => {
                                 </tr>
                             </thead>
 
-                            <tbody className='text-light'>
-                                {
+                        <tbody className='text-light'>
+                            {
 
                                     calculos?.map((valores, index) => (
                                         <tr key={index}>
@@ -62,10 +62,10 @@ export const GaussSeidelPage = () => {
                                     ))
                                 }
 
-                            </tbody>
-                        </table>
+                        </tbody>
+                    </table>
 
-                    </div>
+                </div>
 
             </div>
 
