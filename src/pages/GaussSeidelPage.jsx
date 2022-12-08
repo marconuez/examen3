@@ -54,8 +54,8 @@ export const GaussSeidelPage = () => {
                                     calculos?.map((valores, index) => (
                                         <tr key={index}>
                                             {
-                                                valores?.map((valor) => (
-                                                    <td>{valor.toFixed(3)}</td>
+                                                valores?.map((valor, index) => (
+                                                    <td>{index == 0 ? valor : valor.toFixed(3)}</td>
                                                 ))
                                             }
                                         </tr>
