@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 export const useGaussSeidel = () => {
 
     const [TypesInter, setTypesInter] = useState('')
+    const [calculos, setCalculos] = useState();
+    const [encabezados, setEncabezados] = useState();
+    const [matrizEs, setMatrizEs] = useState(0)
 
     const Gauss = (type) => {
 
@@ -51,11 +54,30 @@ export const useGaussSeidel = () => {
         } while (isContinue);
 
 
+        let newMatriz = [];
+        for (let i = 0; i < matriz[0].length; i++) {
+            let newArray = [];
+            for (let j = 0; j < matriz.length; j++) {
+                newArray.push(matriz[j][i]);
+            }
+            newMatriz.push(newArray);
+        }
+
+        setCalculos(newMatriz);
+        setEncabezados(matriz);
+        setMatrizEs(matrizEs);
     }
+
+
+
+
 
     return ({
         Gauss,
-        TypesInter
+        TypesInter,
+        calculos,
+        matrizEs,
+        encabezados
     })
 
 }
