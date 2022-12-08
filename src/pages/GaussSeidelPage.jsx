@@ -25,36 +25,36 @@ export const GaussSeidelPage = () => {
 
 
                 <br />
-                    <div className="table-responsive-sm">
-                        <table className="table table-responsive">
-                            <thead className="table-light rounded-top">
-                                <tr className="rounded">
-                                    {
-                                        encabezados?.map((valores, index) => (
-                                            <th scope="col">x ({index})</th>
-                                        ))
-                                    }
-                                </tr>
-                            </thead>
-
-                            <tbody className='text-light'>
+                <div className="table-responsive-sm">
+                    <table className="table table-responsive">
+                        <thead className="table-light rounded-top">
+                            <tr className="rounded">
                                 {
-
-                                    calculos?.map((valores, index) => (
-                                        <tr key={index}>
-                                            {
-                                                valores?.map((valor) => (
-                                                    <td scope='col'>{valor.toFixed(3)}</td>
-                                                ))
-                                            }
-                                        </tr>
+                                    encabezados?.map((valores, index) => (
+                                        <th scope="col">x ({index})</th>
                                     ))
                                 }
+                            </tr>
+                        </thead>
 
-                            </tbody>
-                        </table>
+                        <tbody className='text-light'>
+                            {
 
-                    </div>
+                                calculos?.map((valores, index) => (
+                                    <tr key={index}>
+                                        {
+                                            valores?.map((valor, index) => (
+                                                <td scope='col'>{index == 0 ? valor : valor.toFixed(3)}</td>
+                                            ))
+                                        }
+                                    </tr>
+                                ))
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
 
             </div>
 

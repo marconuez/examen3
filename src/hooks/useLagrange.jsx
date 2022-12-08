@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export const useLagrange = () => {
     
     const [TypesInter, setTypesInter] = useState('')
-    const [calculos, setCalculos] = useState([]);
+    const [calculos, setCalculos] = useState();
     const [interpolationResult, setInterpolationResult ] = useState(0)
     // Asignacion de valores
     let x_Values_Array = [1995, 2000, 2005, 2010];
