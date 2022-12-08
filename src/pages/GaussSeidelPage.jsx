@@ -18,7 +18,7 @@ export const GaussSeidelPage = () => {
                         <button className="boton" onClick={() => Gauss(1)}>Inicial</button>
                         <button className="boton" onClick={() => Gauss(2)}>Trivial</button>
                     </div>
-                    <h2 className="tipo" >Tipo de resultado <span className="opcion">{TypesInter}</span> </h2>
+                    <h2 className="tipo" >Tipo de resultado <span className="opcion badge bg-success">{TypesInter}</span> </h2>
         
                     
                 </div>
