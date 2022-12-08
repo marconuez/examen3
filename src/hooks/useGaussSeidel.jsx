@@ -51,8 +51,6 @@ export const useGaussSeidel = () => {
         } while (isContinue);
 
 
-        console.log(matrizEs);
-
     }
 
     return ({
