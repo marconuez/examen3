@@ -6,7 +6,7 @@ import Marco from './img/Marco.png'
 
 export const DashboardPage = () => {
     return (
-        <div className="contenido">
+        <div className="contenido animate__animated animate__fadeIn">
             <SideBar/>
             <div className="contenedor principal">
                 <div className="infomacion">
@@ -14,17 +14,17 @@ export const DashboardPage = () => {
                     <h2 className="tipo centrar-texto">Integrantes</h2>
         
                     <div className="contenedor-integrantes"> 
-                    <div>
+                    <div className='animate__animated animate__rubberBand'>
                         <div className="contenedor-avatar"><img className="avatar" src={Mcgregor} alt=""/></div> 
                         <p className="nombre centrar-texto">J Mcgregor</p>
                     </div>
 
-                    <div>
+                    <div className='animate__animated animate__rubberBand'>
                         <div className="contenedor-avatar"><img className="avatar" src={Rafa} alt=""/></div>
                         <p className="nombre centrar-texto">R Molina</p>
                     </div>
 
-                    <div>
+                    <div className='animate__animated animate__rubberBand'>
                         <div className="contenedor-avatar"><img className="avatar" src={Marco} alt=""/></div>
                         <p className="nombre centrar-texto">M Nuñez</p>
                     </div>

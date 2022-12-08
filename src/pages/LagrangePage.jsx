@@ -7,7 +7,7 @@ export const LagrangePage = () => {
     const { interpolation, TypesInter, result_table, calculos, interpolationResult, interpolation_value } = useLagrange();
 
     return (
-        <div className="contenido">
+        <div className="contenido animate__animated animate__fadeInLeft">
             <SideBar />
             <div className="contenedor principal">
                 <div className="infomacion">
@@ -19,7 +19,7 @@ export const LagrangePage = () => {
                         <button className="boton" onClick={() => interpolation(3)}>Cuadrática</button>
                         <button className="boton" onClick={() => interpolation(4)}>Cúbica</button>
                     </div>
-                    <h2 className="tipo" >Tipo de Interpolación <span className="opcion badge bg-success">{TypesInter}</span> </h2>
+                    <h2 className="tipo" >Tipo de Interpolación <span className="opcion badge bg-success animate__animated animate__swing">{TypesInter}</span> </h2>
 
                 </div>
 
