@@ -47,7 +47,7 @@ export const LagrangePage = () => {
                                     <td>{valores.x}</td>
                                     <td>{valores.funcion}</td>
                                     <td>{valores.label === 0 ? interpolation_value : ''}</td>
-                                    <td>{valores.label === 0 ? interpolationResult.toFixed(0) : ''}</td>
+                                    <td>{valores.label === 0 ? interpolationResult.toFixed(1) : ''}</td>
                                     {
                                         calculos.map((interpolations) => (
                                             valores.label == 0 ? <td>{interpolations.L}</td> : <td> </td>
